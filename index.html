@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitBuddy - Your Wellness Companion</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <!-- Left side - Welcome message and motivational content -->
+                <div class="col-lg-6 d-flex align-items-center justify-content-center welcome-side">
+                    <div class="welcome-content text-center">
+                        <div class="logo-container mb-4">
+                            <i class="fas fa-dumbbell logo-icon"></i>
+                            <h1 class="logo-text">FitBuddy</h1>
+                        </div>
+                        <h2 class="welcome-title">Welcome Back, Champion!</h2>
+                        <p class="welcome-subtitle">Your journey to wellness continues here. Let's make today amazing!</p>
+                        <div class="motivational-quote">
+                            <i class="fas fa-quote-left quote-icon"></i>
+                            <p class="quote-text">"The only bad workout is the one that didn't happen."</p>
+                        </div>
+                        <div class="feature-highlights mt-4">
+                            <div class="feature-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Track Progress</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-apple-alt"></i>
+                                <span>Nutrition Guide</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-trophy"></i>
+                                <span>Achievements</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right side - Login form -->
+                <div class="col-lg-6 d-flex align-items-center justify-content-center login-side">
+                    <div class="login-form-container">
+                        <div class="login-form">
+                            <h3 class="form-title">Sign In to FitBuddy</h3>
+                            <p class="form-subtitle">Enter your credentials to access your wellness dashboard</p>
+                            
+                            <form id="loginForm" novalidate>
+                                <div class="input-group-custom mb-3">
+                                    <div class="input-icon">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <input type="text" id="username" class="form-control" placeholder="Username" required>
+                                    <div class="invalid-feedback">Please enter your username</div>
+                                </div>
+                                
+                                <div class="input-group-custom mb-4">
+                                    <div class="input-icon">
+                                        <i class="fas fa-lock"></i>
+                                    </div>
+                                    <input type="password" id="password" class="form-control" placeholder="Password" required>
+                                    <div class="password-toggle" onclick="togglePassword()">
+                                        <i class="fas fa-eye" id="passwordToggleIcon"></i>
+                                    </div>
+                                    <div class="invalid-feedback">Please enter your password</div>
+                                </div>
+                                
+                                <div class="form-options mb-4">
+                                    <div class="remember-me">
+                                        <input type="checkbox" id="rememberMe" class="custom-checkbox">
+                                        <label for="rememberMe">Remember me</label>
+                                    </div>
+                                    <a href="#" class="forgot-password">Forgot Password?</a>
+                                </div>
+                                
+                                <button type="submit" class="btn-login">
+                                    <span class="btn-text">Sign In</span>
+                                    <i class="fas fa-arrow-right btn-icon"></i>
+                                </button>
+                                
+                                <!-- Quick test button for debugging -->
+                                <button type="button" class="btn-login mt-2" onclick="quickLogin()" style="background: #f97316;">
+                                    <span class="btn-text">Quick Test Login</span>
+                                    <i class="fas fa-bolt btn-icon"></i>
+                                </button>
+                                
+                                <div class="social-login mt-4">
+                                    <p class="social-text">Or continue with</p>
+                                    <div class="social-buttons">
+                                        <button type="button" class="social-btn google-btn">
+                                            <i class="fab fa-google"></i>
+                                        </button>
+                                        <button type="button" class="social-btn facebook-btn">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </button>
+                                        <button type="button" class="social-btn apple-btn">
+                                            <i class="fab fa-apple"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="signup-link mt-4">
+                                    <p>Don't have an account? <a href="#" class="create-account">Create Account</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

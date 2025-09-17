@@ -1,0 +1,350 @@
+{
+  "system_architecture_template": {
+    "slide_dimensions": {
+      "width": 1920,
+      "height": 1080,
+      "aspect_ratio": "16:9"
+    },
+    "color_palette": {
+      "primary_blue": "#0078D4",
+      "success_green": "#107C10",
+      "warning_orange": "#FF8C00",
+      "info_purple": "#5C2D91",
+      "danger_red": "#D13438",
+      "neutral_gray": "#605E5C",
+      "light_gray": "#F3F2F1",
+      "white": "#FFFFFF"
+    },
+    "component_layers": {
+      "frontend_layer": {
+        "position": {
+          "x": 100,
+          "y": 100,
+          "width": 1720,
+          "height": 150
+        },
+        "background_color": "#F3F2F1",
+        "components": [
+          {
+            "name": "Web Browser",
+            "type": "client",
+            "icon": "web_browser",
+            "position": {"x": 150, "y": 130},
+            "size": {"width": 120, "height": 80},
+            "color": "#0078D4",
+            "label": "Web Client"
+          },
+          {
+            "name": "Mobile App",
+            "type": "client",
+            "icon": "mobile_phone",
+            "position": {"x": 320, "y": 130},
+            "size": {"width": 120, "height": 80},
+            "color": "#0078D4",
+            "label": "Mobile App"
+          },
+          {
+            "name": "Desktop App",
+            "type": "client",
+            "icon": "desktop",
+            "position": {"x": 490, "y": 130},
+            "size": {"width": 120, "height": 80},
+            "color": "#0078D4",
+            "label": "Desktop Client"
+          }
+        ]
+      },
+      "load_balancing_layer": {
+        "position": {
+          "x": 100,
+          "y": 300,
+          "width": 1720,
+          "height": 120
+        },
+        "background_color": "#FFF4E6",
+        "components": [
+          {
+            "name": "CDN",
+            "type": "distribution",
+            "icon": "cloud_network",
+            "position": {"x": 200, "y": 330},
+            "size": {"width": 150, "height": 60},
+            "color": "#FF8C00",
+            "label": "CDN"
+          },
+          {
+            "name": "Load Balancer",
+            "type": "distribution",
+            "icon": "network_hub",
+            "position": {"x": 400, "y": 330},
+            "size": {"width": 150, "height": 60},
+            "color": "#FF8C00",
+            "label": "Load Balancer"
+          },
+          {
+            "name": "API Gateway",
+            "type": "gateway",
+            "icon": "api",
+            "position": {"x": 600, "y": 330},
+            "size": {"width": 150, "height": 60},
+            "color": "#FF8C00",
+            "label": "API Gateway"
+          }
+        ]
+      },
+      "application_layer": {
+        "position": {
+          "x": 100,
+          "y": 470,
+          "width": 1720,
+          "height": 180
+        },
+        "background_color": "#E6F3FF",
+        "components": [
+          {
+            "name": "Web Server",
+            "type": "server",
+            "icon": "server",
+            "position": {"x": 150, "y": 500},
+            "size": {"width": 140, "height": 90},
+            "color": "#0078D4",
+            "label": "Web Server\n(Nginx/Apache)"
+          },
+          {
+            "name": "App Server 1",
+            "type": "server",
+            "icon": "application",
+            "position": {"x": 320, "y": 500},
+            "size": {"width": 140, "height": 90},
+            "color": "#0078D4",
+            "label": "App Server\nInstance 1"
+          },
+          {
+            "name": "App Server 2",
+            "type": "server",
+            "icon": "application",
+            "position": {"x": 490, "y": 500},
+            "size": {"width": 140, "height": 90},
+            "color": "#0078D4",
+            "label": "App Server\nInstance 2"
+          },
+          {
+            "name": "Microservice A",
+            "type": "microservice",
+            "icon": "container",
+            "position": {"x": 660, "y": 500},
+            "size": {"width": 120, "height": 90},
+            "color": "#5C2D91",
+            "label": "Auth Service"
+          },
+          {
+            "name": "Microservice B",
+            "type": "microservice",
+            "icon": "container",
+            "position": {"x": 810, "y": 500},
+            "size": {"width": 120, "height": 90},
+            "color": "#5C2D91",
+            "label": "Payment Service"
+          }
+        ]
+      },
+      "database_layer": {
+        "position": {
+          "x": 100,
+          "y": 700,
+          "width": 1720,
+          "height": 150
+        },
+        "background_color": "#E6F7E6",
+        "components": [
+          {
+            "name": "Primary Database",
+            "type": "database",
+            "icon": "database",
+            "position": {"x": 200, "y": 730},
+            "size": {"width": 140, "height": 80},
+            "color": "#107C10",
+            "label": "Primary DB\n(PostgreSQL)"
+          },
+          {
+            "name": "Read Replica",
+            "type": "database",
+            "icon": "database",
+            "position": {"x": 370, "y": 730},
+            "size": {"width": 120, "height": 80},
+            "color": "#107C10",
+            "label": "Read Replica"
+          },
+          {
+            "name": "Cache",
+            "type": "cache",
+            "icon": "memory",
+            "position": {"x": 520, "y": 730},
+            "size": {"width": 120, "height": 80},
+            "color": "#107C10",
+            "label": "Redis Cache"
+          },
+          {
+            "name": "Data Warehouse",
+            "type": "warehouse",
+            "icon": "storage",
+            "position": {"x": 670, "y": 730},
+            "size": {"width": 140, "height": 80},
+            "color": "#107C10",
+            "label": "Data Warehouse"
+          }
+        ]
+      },
+      "external_services": {
+        "position": {
+          "x": 1000,
+          "y": 300,
+          "width": 800,
+          "height": 400
+        },
+        "components": [
+          {
+            "name": "Payment Gateway",
+            "type": "external",
+            "icon": "payment",
+            "position": {"x": 1050, "y": 400},
+            "size": {"width": 140, "height": 70},
+            "color": "#FF8C00",
+            "label": "Stripe/PayPal"
+          },
+          {
+            "name": "OAuth Provider",
+            "type": "external",
+            "icon": "security",
+            "position": {"x": 1220, "y": 400},
+            "size": {"width": 140, "height": 70},
+            "color": "#D13438",
+            "label": "OAuth 2.0"
+          },
+          {
+            "name": "Email Service",
+            "type": "external",
+            "icon": "email",
+            "position": {"x": 1390, "y": 400},
+            "size": {"width": 140, "height": 70},
+            "color": "#FF8C00",
+            "label": "SendGrid"
+          },
+          {
+            "name": "Analytics",
+            "type": "external",
+            "icon": "analytics",
+            "position": {"x": 1560, "y": 400},
+            "size": {"width": 140, "height": 70},
+            "color": "#5C2D91",
+            "label": "Google Analytics"
+          }
+        ]
+      }
+    },
+    "connections": [
+      {
+        "from": "Web Browser",
+        "to": "CDN",
+        "type": "https",
+        "color": "#0078D4",
+        "style": "solid_arrow",
+        "label": "HTTPS"
+      },
+      {
+        "from": "Mobile App",
+        "to": "API Gateway",
+        "type": "api",
+        "color": "#0078D4",
+        "style": "solid_arrow",
+        "label": "REST API"
+      },
+      {
+        "from": "CDN",
+        "to": "Load Balancer",
+        "type": "http",
+        "color": "#FF8C00",
+        "style": "solid_arrow",
+        "label": "HTTP"
+      },
+      {
+        "from": "Load Balancer",
+        "to": "Web Server",
+        "type": "http",
+        "color": "#0078D4",
+        "style": "solid_arrow",
+        "label": "Load Balanced"
+      },
+      {
+        "from": "API Gateway",
+        "to": "App Server 1",
+        "type": "api",
+        "color": "#0078D4",
+        "style": "solid_arrow",
+        "label": "API Calls"
+      },
+      {
+        "from": "App Server 1",
+        "to": "Primary Database",
+        "type": "database",
+        "color": "#107C10",
+        "style": "solid_arrow",
+        "label": "Read/Write"
+      },
+      {
+        "from": "App Server 2",
+        "to": "Read Replica",
+        "type": "database",
+        "color": "#107C10",
+        "style": "dashed_arrow",
+        "label": "Read Only"
+      },
+      {
+        "from": "Microservice A",
+        "to": "OAuth Provider",
+        "type": "external",
+        "color": "#D13438",
+        "style": "solid_arrow",
+        "label": "Auth Request"
+      },
+      {
+        "from": "Microservice B",
+        "to": "Payment Gateway",
+        "type": "external",
+        "color": "#FF8C00",
+        "style": "solid_arrow",
+        "label": "Payment Processing"
+      },
+      {
+        "from": "Primary Database",
+        "to": "Read Replica",
+        "type": "replication",
+        "color": "#107C10",
+        "style": "dashed_arrow",
+        "label": "Replication"
+      }
+    ],
+    "legends": [
+      {
+        "type": "color_legend",
+        "position": {"x": 1400, "y": 900},
+        "items": [
+          {"color": "#0078D4", "label": "Application Layer"},
+          {"color": "#107C10", "label": "Data Layer"},
+          {"color": "#FF8C00", "label": "External Services"},
+          {"color": "#5C2D91", "label": "Infrastructure"},
+          {"color": "#D13438", "label": "Security"}
+        ]
+      },
+      {
+        "type": "connection_legend",
+        "position": {"x": 100, "y": 900},
+        "items": [
+          {"style": "solid_arrow", "label": "Synchronous"},
+          {"style": "dashed_arrow", "label": "Asynchronous"},
+          {"style": "double_arrow", "label": "Bidirectional"}
+        ]
+      }
+    ]
+  }
+}
